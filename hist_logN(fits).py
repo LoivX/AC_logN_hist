@@ -7,12 +7,10 @@ from tkinter import filedialog
 from astropy.table import Table, vstack
 
 
-# Initialize an empty list to store the extracted data
-data_list = []
 
 ''' FUNCTIONS '''
 # Extract data from .fits file
-def extract_data_from_fits():
+def extract_data_from_fits(data_list=[]):
     file_paths = filedialog.askopenfilenames(filetypes=[("FITS Files", "*.fits")])
     
     for file_path in file_paths:
