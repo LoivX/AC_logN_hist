@@ -13,15 +13,16 @@ data_list = []
 ''' FUNCTIONS '''
 # Extract data from .fits file
 def extract_data_from_fits():
-    file_path = filedialog.askopenfilename(filetypes=[("FITS Files", "*.fits")])
-    print('file selected succesfully: ', file_path)
+    file_paths = filedialog.askopenfilenames(filetypes=[("FITS Files", "*.fits")])
     
-    with fits.open(file_path) as hdul:
-        # Extract the table
-        table = hdul[1]
-        
-        # Append the table to the list
-        data_list.append(table.data)
+    for file_path in file_paths:
+        print('file selected successfully: ', file_path)
+        with fits.open(file_path) as hdul:
+            # Extract the table
+            table = hdul[1]
+            
+            # Append the table to the list
+            data_list.append(table.data)
 
 # Merge the data collected and creates a histogram of logN for CIV systems
 def create_histogram(data_list):
