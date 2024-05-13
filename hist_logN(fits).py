@@ -4,7 +4,7 @@ from astropy.io import fits
 import matplotlib.pyplot as plt
 import tkinter as tk
 from tkinter import filedialog
-from astropy.table import Table, vstack
+from astropy.table import Table
 
 
 # Initialize an empty list to store the extracted data
@@ -42,7 +42,6 @@ def create_histogram(data_list):
 
 # Create the GUI window
 def GUI():
-    # Create the GUI window
     root = tk.Tk()
 
     # Button to select a file and call the extract_data_from_fits function
