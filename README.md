@@ -1,31 +1,28 @@
-# Histogram of logN for CIV Systems
+# Astrocook column density analyzer
 
-This simple Python script for Astrocook generates a histogram of the logN values (for CIV systems only) from FITS files analized via Astrocook.
+## Description
 
-## Functions
+The program is designed to analyze FITS files produced by the 'Astrocook' software. This tool allows you to extract data from FITS files, create histograms of logN values for selected systems, and identify the knee of the number of systems over the logN curve.
 
-### `create_histogram(data_list)`
+## Features
 
-This function takes a list of FITS data arrays, merges them into a single table, extracts the CIV systems, and plots a histogram of the logN values.
+- **Data Extraction**: Loading and parsing of FITS files.
+- **Error Handling**: Display error windows for warnings and issues.
+- **System Analysis**: Extracting specific system data from the dataset, fitting data with a linear fit, and calculating the logN value corresponding to the knee.
+- **Graph Creation**: Generating histograms of logN values selected systems and displaying the fitted line.
 
-### `GUI()`
+## System Requirements
 
-This function creates a simple GUI with a button that allows the user to select a FITS file. When the button is clicked, the `extract_data_from_fits()` function is called.
-
-## Usage
-
-To use this script, run it with Python and use the GUI to select a FITS file. The script will extract the data from the FITS file, merge it with any previously selected data, and update the histogram.
-
-## Dependencies
-
-This script requires the following Python packages:
-
-- numpy
-- astropy
-- matplotlib
-- tkinter
+- Python 3.7 or higher
+- Python libraries:
+  - numpy
+  - astropy
+  - matplotlib
+  - tkinter
 
 These can be installed with pip:
 
 ```bash
 pip install numpy astropy matplotlib tkinter
+
+
