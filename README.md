@@ -24,5 +24,22 @@ These can be installed with pip:
 
 ```bash
 pip install numpy astropy matplotlib tkinter
+```
 
+## Usage
+1) Run the main script to start the graphical interface:
+```bash
+python main.py
+```
+2) Use the buttons and input fields to select FITS files, enter the system name, and the number of bins for the histogram.
+3) Click on "Create histogram" to generate the plot.
 
+## Example
+1) Start the program:
+```bash
+python main.py
+```
+2) Click on "Select file" and choose one or more FITS files produced by Astrocook.
+3) Enter the system name in the "Name of the system" field.
+4) Enter the number of bins in the "Number of bins" field.
+5) Click on "Create histogram" to generate and display the histogram of logN values.
